@@ -30,16 +30,32 @@ public class Menu {
                     System.out.println("Receipt is converted");
                     break;
                 case "2":
-                    receipt.getTheMostValuableProduct();
+                    try {
+                        receipt.getTheMostValuableProduct();
+                    }catch (Exception e){
+                        System.out.println("You have not entered receipt");
+                    }
                     break;
                 case "3":
-                    System.out.println(receipt.getValueOfAllProducts());
+                    try {
+                        System.out.println(receipt.getValueOfAllProducts());
+                    }catch (Exception e){
+                        System.out.println("You have not entered receipt");
+                    }
                     break;
                 case "4":
-                    receipt.getCheatedProduct();
+                    try {
+                        receipt.getCheatedProduct();
+                    }catch (Exception e){
+                        System.out.println("You have not entered receipt");
+                    }
                     break;
                 case "5":
-                    receipt.whichAndHowManyCoins();
+                    try {
+                        receipt.whichAndHowManyCoins();
+                    }catch (Exception e){
+                        System.out.println("You have not entered receipt");
+                    }
                     break;
                 case "x":
                     break;

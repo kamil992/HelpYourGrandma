@@ -1,8 +1,6 @@
 package pl.grandma;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Receipt {
 
@@ -38,8 +36,9 @@ public class Receipt {
     }
 
     public void getCheatedProduct() {
-        List<Product> cheatedProducts = new LinkedList<>();
-        products.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
+        Set<Product> cheatedProducts = new HashSet<>();
+        cheatedProducts.stream().sorted();
+                //sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
 
         for (Product p : products) {
             for (Product p1 : products) {
